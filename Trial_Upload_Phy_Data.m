@@ -11,7 +11,7 @@ spike_ts = 'spike_times.npy';
 result = find_data(rootdir, ratID, trialDate);
 disp(result)
 dir(result);
-spike_times = strcat(result, spike_ts);
+spike_subfolder = strcat(result, spike_ts);
 
 % if exist(spike_times, "file")
 %     spike_times = readNPY(result);
@@ -19,7 +19,7 @@ spike_times = strcat(result, spike_ts);
 %     error('The file does not esist.', result);
 % end
 
-spike_times = readNPY(result);
+spike_subfolder = readNPY(spike_subfolder);
 
 function rat_data_folder = find_data(root_dir, ratID, trialDate)
 rat_data_folder = strcat(root_dir, '/', ratID, '/', strcat(ratID, '-rawdata'), '/', strcat(ratID, '_', trialDate, 'a'), '/', strcat(ratID, '_', 'ChoiceStandard_', trialDate, '_*'), '/','spike_times.npy');
