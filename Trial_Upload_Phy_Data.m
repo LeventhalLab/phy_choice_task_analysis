@@ -26,3 +26,5 @@ end
 %     error('The file does not esist.', result);
 % end
 %spike_ts = 'spike_times.npy';
+
+%issue with genpath
