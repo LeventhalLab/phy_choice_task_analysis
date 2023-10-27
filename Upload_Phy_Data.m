@@ -11,8 +11,6 @@ rootdir = 'X:/Neuro-Leventhal/data/ChoiceTask';
 
 rdf = find_data(rootdir, session_info);
 
-
-
 spikes_name = fullfile(rdf, 'spike_times.npy');
 spike_times = readNPY(spikes_name);
 spike_clusters = readNPY(fullfile(rdf, 'spike_clusters.npy'));
